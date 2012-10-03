@@ -1,23 +1,127 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--win1-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="win1" id="2" userLabel="win1" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Lg-5v-Ubo" userLabel="hrtmap"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR2-B1-yHh" userLabel="hrtTitle">
+                                <color key="tintColor" red="0.0" green="0.39215686274509803" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="HRT Bus Locator" id="a1C-N1-Nhz"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="qqj-Ei-fTD">
+                                <items>
+                                    <barButtonItem title="Item" id="i7h-Hx-cVy">
+                                        <connections>
+                                            <segue destination="gA7-qa-Ld2" kind="modal" id="y66-bT-SHg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="273-t7-g0S"/>
+                                    <barButtonItem title="Item" style="plain" id="y6f-G7-6t1">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="592-28-TPF">
+                                            <rect key="frame" x="79" y="8" width="161" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Favorites"/>
+                                            </segments>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </segmentedControl>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WNP-Me-9XY"/>
+                                    <barButtonItem systemItem="refresh" id="0aE-e4-MSg">
+                                        <connections>
+                                            <action selector="updatelocation" destination="2" id="dyj-bl-G9N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hrticon.png" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-RB-bfA">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Lg-5v-Ubo" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="03B-sS-MaE"/>
+                            <constraint firstItem="WR2-B1-yHh" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="CXG-LG-fyH"/>
+                            <constraint firstItem="8Lg-5v-Ubo" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="FKL-Vt-hDA"/>
+                            <constraint firstItem="LdX-RB-bfA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="7" id="XhK-Tq-Wrp"/>
+                            <constraint firstItem="qqj-Ei-fTD" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="g44-UW-0FV"/>
+                            <constraint firstItem="qqj-Ei-fTD" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jQX-Gf-6KZ"/>
+                            <constraint firstItem="8Lg-5v-Ubo" firstAttribute="top" secondItem="WR2-B1-yHh" secondAttribute="bottom" type="default" id="jaa-Qu-YUz"/>
+                            <constraint firstItem="8Lg-5v-Ubo" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="jyy-tw-1lC"/>
+                            <constraint firstItem="qqj-Ei-fTD" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="mBb-h5-y5R"/>
+                            <constraint firstItem="LdX-RB-bfA" firstAttribute="centerY" secondItem="WR2-B1-yHh" secondAttribute="centerY" type="default" id="mmz-32-QIM"/>
+                            <constraint firstItem="WR2-B1-yHh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nrv-Le-aMd"/>
+                            <constraint firstItem="WR2-B1-yHh" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="shZ-6I-6YY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GUh-cu-YVw"/>
+                    <connections>
+                        <outlet property="mapView" destination="8Lg-5v-Ubo" id="Zti-Wg-60h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--settings-->
+        <scene sceneID="KCG-hq-FCf">
+            <objects>
+                <viewController id="gA7-qa-Ld2" userLabel="settings" customClass="SettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="na7-xK-mBN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivu-pj-bN6">
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6h-uC-rDF" userLabel="hrtTitle">
+                                <color key="tintColor" red="0.0" green="0.3921568627" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Settings" id="JJy-6X-tlO">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="gFW-a1-aks">
+                                            <connections>
+                                                <action selector="done" destination="gA7-qa-Ld2" id="lMP-A3-rVk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ivu-pj-bN6" firstAttribute="bottom" secondItem="na7-xK-mBN" secondAttribute="bottom" type="default" id="7Mh-yg-7AF"/>
+                            <constraint firstItem="w6h-uC-rDF" firstAttribute="trailing" secondItem="na7-xK-mBN" secondAttribute="trailing" type="default" id="NuS-Gr-C57"/>
+                            <constraint firstItem="Ivu-pj-bN6" firstAttribute="top" secondItem="w6h-uC-rDF" secondAttribute="bottom" type="default" id="a7n-eu-4Fa"/>
+                            <constraint firstItem="w6h-uC-rDF" firstAttribute="leading" secondItem="na7-xK-mBN" secondAttribute="leading" type="default" id="aZp-9J-Ggr"/>
+                            <constraint firstItem="Ivu-pj-bN6" firstAttribute="leading" secondItem="na7-xK-mBN" secondAttribute="leading" type="default" id="fPK-06-cyn"/>
+                            <constraint firstItem="w6h-uC-rDF" firstAttribute="top" secondItem="na7-xK-mBN" secondAttribute="top" type="default" id="i3W-Pn-Uue"/>
+                            <constraint firstItem="Ivu-pj-bN6" firstAttribute="trailing" secondItem="na7-xK-mBN" secondAttribute="trailing" type="default" id="vT9-eP-DQd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="buD-zy-QgV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WjW-td-rZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="643" y="66"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="hrticon.png" width="50" height="34"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
