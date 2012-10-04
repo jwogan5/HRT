@@ -18,6 +18,15 @@
 
 - (IBAction) done {
 	NSLog(@"clicked done button ...");
+    
+    // Save the user settings for now
+    int constantLocation = 0;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:constantLocation forKey:@"constantLocation"];
+    [defaults synchronize];
+    
+    
+    // Close the Modal Settings Window
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

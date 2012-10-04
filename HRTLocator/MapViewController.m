@@ -14,6 +14,7 @@
 @implementation MapViewController
 @synthesize locationManager=_locationManager;
 @synthesize mapView;
+@synthesize initialZoom;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -26,16 +27,46 @@
 }
 
 -(IBAction)updatelocation{
-    NSLog(@"hit the refresh location button ...");
+    
+    self.initialZoom = 0;
     if([CLLocationManager locationServicesEnabled]){
         [self.locationManager startUpdatingLocation];
     }
+
+}
+
+-(IBAction)getCurrentMapCenter{
+    
+    NSLog(@"trying to get the center coordinates ...");
+    
+    CLLocationCoordinate2D center = [mapView convertPoint:mapView.center toCoordinateFromView:mapView];
+    double lat = center.latitude;
+    double lon = center.longitude;
+    
+    NSLog(@"The center latitude:%f",lat);
+    NSLog(@"The center longitiude:%f",lon);
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    
+    // Set is this the initial zoom
+    self.initialZoom = 0;
+  
+    // Get all user default settings for the app
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"constantLocation"] != nil)
+    {
+        //constantLocation = [defaults integerForKey:@"constantLocation"];
+        // read in variables that I might need in this method
+    }
+    else
+    {
+        [defaults setInteger:0 forKey:@"constantLocation"];
+        [defaults synchronize];
+    }
+
     // Define the Map
     mapView.mapType = MKMapTypeStandard;
     mapView.showsUserLocation = YES;
@@ -58,31 +89,32 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSDate* eventDate = newLocation.timestamp;
-    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 15.0)
-    {
-        if(newLocation.horizontalAccuracy < 35.0){
-            //Location seems pretty accurate, let's use it!
-            NSLog(@"latitude %+.6f, longitude %+.6f\n",
-                  newLocation.coordinate.latitude,
-                  newLocation.coordinate.longitude);
-            NSLog(@"Horizontal Accuracy:%f", newLocation.horizontalAccuracy);
-            
-            NSLog(@"called delegate method ...");
-            MKCoordinateRegion region; //create a region.  No this is not a pointer
-            region.center = newLocation.coordinate;  // set the region center to your current location
-            MKCoordinateSpan span; // create a range of your view
-            span.latitudeDelta=0.1;               //  0.001 to 120
-            span.longitudeDelta=0.1;
-            region.span=span;
-            [self.mapView setRegion:region animated:YES];
-            
-            //Optional: turn off location services once we've gotten a good location
-            [manager stopUpdatingLocation];
+    if (self.initialZoom == 0)
+    {   self.initialZoom = 1;
+        NSDate* eventDate = newLocation.timestamp;
+        NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+        if (abs(howRecent) < 15.0)
+        {
+            if(newLocation.horizontalAccuracy < 35.0){
+                
+                MKCoordinateRegion region;
+                region.center = newLocation.coordinate;
+                MKCoordinateSpan span;
+                span.latitudeDelta=0.2; //  0.001 to 120
+                span.longitudeDelta=0.2;
+                region.span=span;
+                [self.mapView setRegion:region animated:YES];
+            }
         }
     }
     
+    // Turn off location services if the user wants it that way
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int constantLocation = [defaults integerForKey:@"constantLocation"];
+    if (constantLocation != 1)
+        [manager stopUpdatingLocation];
+
+    NSLog(@"The constant location services are set to:%i",constantLocation);
 }
 
 

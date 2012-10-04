@@ -15,9 +15,10 @@
     MKMapView *mapView;
 }
 
+@property NSInteger initialZoom;
 @property (strong, nonatomic) CLLocationManager *locationManager;
-
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 -(IBAction)updatelocation;
+-(IBAction)getCurrentMapCenter;
 
 @end
