@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface SettingViewController : UIViewController{
-    
+    //UITableView *locSettingsTable;
 }
 
-
+//@property (nonatomic, retain) IBOutlet UITableView *locSettingsTable;
 
 
 @end

@@ -15,6 +15,8 @@
 @synthesize locationManager=_locationManager;
 @synthesize mapView;
 @synthesize initialZoom;
+@synthesize bushigh;
+@synthesize mapLoad;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -22,6 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        NSLog(@"here");
     }
     return self;
 }
@@ -32,6 +35,41 @@
     if([CLLocationManager locationServicesEnabled]){
         [self.locationManager startUpdatingLocation];
     }
+    
+    // Animate in the bus highlighted view
+    if (bushigh.layer.hidden == true)
+    {
+        bushigh.alpha = 0.0;
+        bushigh.layer.hidden = false;
+        [UIView animateWithDuration:1.2
+                              delay:0.0
+                            options: UIViewAnimationCurveEaseInOut
+                         animations:^{
+                             bushigh.alpha = 1.0;
+                             if (self.mapLoad == true)
+                                 bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y - 35);
+                             else
+                                 self.mapLoad = true;
+                         }
+                         completion:nil];
+    }
+    else
+    {
+        [UIView animateWithDuration:1.2
+                              delay:0.0
+                            options: UIViewAnimationCurveEaseInOut
+                         animations:^{
+                             bushigh.alpha = 0.0;
+                             bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 35);
+                         }
+                         completion:^(BOOL finished){
+                             // Wait one second and then fade in the view
+                            bushigh.layer.hidden = true;
+        }];
+         
+    }
+    
+
 
 }
 
@@ -50,6 +88,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Hide the bus highlight window
+    bushigh.layer.hidden = true;
+    self.mapLoad = false;
+    
+    // Create Bus Array
+    Bus *bus = [[Bus alloc]init];
+    [bus setNumber:2035];
+    [bus setLocation:@"My Location is Home"];
+    NSLog(@"Bus number is %i",[bus getNumber]);
+    NSLog(@"Bus lat is : %f",[bus getLat]);
+    NSLog(@"Bus lon is : %f",[bus getLon]);
+    
     
     // Set is this the initial zoom
     self.initialZoom = 0;

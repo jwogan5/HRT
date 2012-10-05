@@ -13,7 +13,7 @@
 @end
 
 @implementation SettingViewController
-
+//@synthesize locSettingsTable;
 
 
 - (IBAction) done {
@@ -45,6 +45,14 @@
 	// Do any additional setup after loading the view.
     
     NSLog(@"called settings view ...");
+    
+    /*
+    locSettingsTable.layer.cornerRadius = 5;
+    locSettingsTable.layer.shadowColor = [[UIColor blackColor] CGColor];
+    locSettingsTable.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    locSettingsTable.layer.shadowOpacity = .90f;
+    locSettingsTable.layer.shadowRadius = 3.0f;
+     */
 }
 
 
