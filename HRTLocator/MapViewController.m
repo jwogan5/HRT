@@ -17,6 +17,10 @@
 @synthesize initialZoom;
 @synthesize bushigh;
 @synthesize mapLoad;
+@synthesize favorite;
+@synthesize favImage;
+@synthesize backImage;
+@synthesize viewRoute;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -39,28 +43,33 @@
     // Animate in the bus highlighted view
     if (bushigh.layer.hidden == true)
     {
-        bushigh.alpha = 0.0;
+        //bushigh.alpha = 0.0;
         bushigh.layer.hidden = false;
-        [UIView animateWithDuration:1.2
+        [UIView animateWithDuration:.8
                               delay:0.0
                             options: UIViewAnimationCurveEaseInOut
                          animations:^{
-                             bushigh.alpha = 1.0;
                              if (self.mapLoad == true)
-                                 bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y - 35);
+                             {
+                                bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y - 60);
+                                viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y - 60);
+                             }
                              else
+                             {
                                  self.mapLoad = true;
+                                 viewRoute.hidden = false;
+                             }                                 
                          }
                          completion:nil];
     }
     else
     {
-        [UIView animateWithDuration:1.2
+        [UIView animateWithDuration:.8
                               delay:0.0
                             options: UIViewAnimationCurveEaseInOut
                          animations:^{
-                             bushigh.alpha = 0.0;
-                             bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 35);
+                             bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 60);
+                             viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y + 60);
                          }
                          completion:^(BOOL finished){
                              // Wait one second and then fade in the view
@@ -83,6 +92,10 @@
     
     NSLog(@"The center latitude:%f",lat);
     NSLog(@"The center longitiude:%f",lon);
+    
+    // Set the bus favorite star
+    UIImage *favimage = [UIImage imageNamed:@"star.png"];
+    [favImage setImage:favimage];
 }
 
 - (void)viewDidLoad
@@ -91,6 +104,7 @@
     
     // Hide the bus highlight window
     bushigh.layer.hidden = true;
+    viewRoute.hidden = true;
     self.mapLoad = false;
     
     // Create Bus Array

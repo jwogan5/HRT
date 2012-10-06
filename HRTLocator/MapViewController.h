@@ -16,6 +16,10 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>{
     MKMapView *mapView;
     UIView *bushigh;
+    UIButton *favorite;
+    UIImageView *favImage;
+    UIImageView *backImage;
+    UIButton *viewRoute;
 }
 
 @property NSInteger initialZoom;
@@ -23,6 +27,10 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UIView *bushigh;
+@property (nonatomic, retain) IBOutlet UIButton *favorite;
+@property (nonatomic, retain) IBOutlet UIButton *viewRoute;
+@property (nonatomic, retain) IBOutlet UIImageView *favImage;
+@property (nonatomic, retain) IBOutlet UIImageView *backImage;
 -(IBAction)updatelocation;
 -(IBAction)getCurrentMapCenter;
 
