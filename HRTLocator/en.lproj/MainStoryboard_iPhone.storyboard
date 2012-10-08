@@ -43,7 +43,23 @@
                                             <constraint firstAttribute="width" constant="20" id="OGr-iR-7dq"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Route" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCC-61-cMI">
+                                    <button clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGO-h1-bcV" userLabel="favbutton">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Jyg-A9-Vf9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getCurrentMapCenter" destination="2" eventType="touchDown" id="VIN-ue-X2z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Route" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCC-61-cMI" userLabel="routeTitle">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Gy4-qd-loS"/>
                                             <constraint firstAttribute="width" constant="42" id="cfx-wD-nkE"/>
@@ -52,7 +68,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="36 (Newtown to Tidewater)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqE-K8-Ksf">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="36 (Newtown to Tidewater)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqE-K8-Ksf" userLabel="route">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="213" id="ykp-Aw-mIh"/>
                                         </constraints>
@@ -62,7 +78,7 @@
                                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2035" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-L8-bDU">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2035" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-L8-bDU" userLabel="busnumber">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="71" id="RD4-ye-pyV"/>
                                         </constraints>
@@ -72,16 +88,16 @@
                                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bus Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-kz-olN">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bus Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-kz-olN" userLabel="busTitle">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="81" id="3le-du-Jpw"/>
-                                            <constraint firstAttribute="height" constant="21" id="rJQ-mm-pz6"/>
+                                            <constraint firstAttribute="height" constant="21" id="5bt-Uy-wRi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvv-dj-4St">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvv-dj-4St" userLabel="routego">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="PcZ-G3-vyC"/>
                                             <constraint firstAttribute="width" constant="29" id="kES-sZ-hjy"/>
@@ -102,23 +118,26 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Gvv-dj-4St" firstAttribute="centerY" secondItem="OX3-dB-z9H" secondAttribute="centerY" type="default" id="0Wc-K7-D66"/>
-                                    <constraint firstAttribute="bottom" secondItem="NTI-kz-olN" secondAttribute="bottom" constant="74" id="0Xo-JW-Mia"/>
                                     <constraint firstItem="cAr-BV-ITr" firstAttribute="bottom" secondItem="UaZ-65-fv4" secondAttribute="bottom" type="default" id="0df-5N-yFI"/>
                                     <constraint firstItem="Pgj-L8-bDU" firstAttribute="leading" secondItem="NTI-kz-olN" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2dH-aS-NaI"/>
                                     <constraint firstItem="CCC-61-cMI" firstAttribute="baseline" secondItem="BqE-K8-Ksf" secondAttribute="baseline" type="default" id="32F-GI-8n6"/>
                                     <constraint firstAttribute="bottom" secondItem="OX3-dB-z9H" secondAttribute="bottom" constant="44" id="9uT-wF-aUG"/>
                                     <constraint firstItem="NTI-kz-olN" firstAttribute="leading" secondItem="UaZ-65-fv4" secondAttribute="leading" constant="5" id="AzY-RE-duZ"/>
                                     <constraint firstItem="CCC-61-cMI" firstAttribute="top" secondItem="BqE-K8-Ksf" secondAttribute="top" type="default" id="CFE-uI-Um6"/>
+                                    <constraint firstItem="PGO-h1-bcV" firstAttribute="leading" secondItem="73x-nU-wFi" secondAttribute="leading" type="default" id="DPI-bu-rbf"/>
                                     <constraint firstItem="OX3-dB-z9H" firstAttribute="leading" secondItem="UaZ-65-fv4" secondAttribute="leading" type="default" id="Jon-Je-KnN"/>
                                     <constraint firstAttribute="bottom" secondItem="73x-nU-wFi" secondAttribute="bottom" constant="77" id="Jwd-0T-9HZ"/>
                                     <constraint firstItem="BqE-K8-Ksf" firstAttribute="centerX" secondItem="OX3-dB-z9H" secondAttribute="centerX" type="default" id="Lw9-fn-fY3"/>
+                                    <constraint firstAttribute="bottom" secondItem="PGO-h1-bcV" secondAttribute="bottom" constant="76" id="MrW-p4-22h"/>
                                     <constraint firstItem="cAr-BV-ITr" firstAttribute="top" secondItem="UaZ-65-fv4" secondAttribute="top" type="default" id="SRt-Po-Pxq"/>
                                     <constraint firstItem="Pgj-L8-bDU" firstAttribute="top" secondItem="NTI-kz-olN" secondAttribute="top" type="default" id="Tsh-yK-h8J"/>
                                     <constraint firstItem="cAr-BV-ITr" firstAttribute="leading" secondItem="UaZ-65-fv4" secondAttribute="leading" type="default" id="Ub0-uz-Pf0"/>
                                     <constraint firstAttribute="bottom" secondItem="CCC-61-cMI" secondAttribute="bottom" constant="51" id="VgU-gq-15a"/>
+                                    <constraint firstItem="NTI-kz-olN" firstAttribute="bottom" secondItem="Pgj-L8-bDU" secondAttribute="bottom" type="default" id="WTU-5v-yMR"/>
+                                    <constraint firstAttribute="bottom" secondItem="NTI-kz-olN" secondAttribute="bottom" constant="74" id="XY8-y7-0gl"/>
                                     <constraint firstItem="73x-nU-wFi" firstAttribute="leading" secondItem="UaZ-65-fv4" secondAttribute="leading" constant="151" id="Zsz-V0-EB9"/>
                                     <constraint firstAttribute="trailing" secondItem="Gvv-dj-4St" secondAttribute="trailing" constant="14" id="ckH-gH-JNE"/>
-                                    <constraint firstItem="NTI-kz-olN" firstAttribute="bottom" secondItem="Pgj-L8-bDU" secondAttribute="bottom" type="default" id="lGH-LV-WK3"/>
+                                    <constraint firstItem="PGO-h1-bcV" firstAttribute="trailing" secondItem="73x-nU-wFi" secondAttribute="trailing" type="default" id="loH-4j-RHz"/>
                                     <constraint firstItem="CCC-61-cMI" firstAttribute="leading" secondItem="NTI-kz-olN" secondAttribute="leading" type="default" id="xol-gf-S4t"/>
                                 </constraints>
                             </view>
@@ -193,6 +212,7 @@
                     <navigationItem key="navigationItem" id="GUh-cu-YVw"/>
                     <connections>
                         <outlet property="bushigh" destination="OX3-dB-z9H" id="TDP-Dg-YBH"/>
+                        <outlet property="favImage" destination="73x-nU-wFi" id="bwn-Bh-W4C"/>
                         <outlet property="mapView" destination="cAr-BV-ITr" id="CEp-TT-4L5"/>
                         <outlet property="viewRoute" destination="Gvv-dj-4St" id="GbO-v7-cVJ"/>
                     </connections>
