@@ -251,12 +251,6 @@
                                                     <constraint firstAttribute="height" constant="70" id="NBm-99-4Vf"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="star_no.png" translatesAutoresizingMaskIntoConstraints="NO" id="uP6-fe-35z" userLabel="favImage">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="OnI-3t-eEg"/>
-                                                    <constraint firstAttribute="width" constant="20" id="gwt-du-qoJ"/>
-                                                </constraints>
-                                            </imageView>
                                             <button clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a78-Ow-5xf">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="56H-fb-DSI"/>
@@ -279,10 +273,8 @@
                                             <constraint firstItem="wjb-0L-O33" firstAttribute="leading" secondItem="eGF-Ws-JzQ" secondAttribute="leading" type="default" id="1WI-eN-KSG"/>
                                             <constraint firstAttribute="width" constant="320" id="2A0-Ov-LhL"/>
                                             <constraint firstItem="wjb-0L-O33" firstAttribute="trailing" secondItem="eGF-Ws-JzQ" secondAttribute="trailing" type="default" id="NbK-uC-gaN"/>
-                                            <constraint firstItem="uP6-fe-35z" firstAttribute="leading" secondItem="eGF-Ws-JzQ" secondAttribute="leading" constant="112" id="Q82-zz-rof"/>
                                             <constraint firstItem="wjb-0L-O33" firstAttribute="top" secondItem="eGF-Ws-JzQ" secondAttribute="top" type="default" id="Rud-0a-nZ2"/>
                                             <constraint firstAttribute="height" constant="35" id="VkM-fB-xRD"/>
-                                            <constraint firstItem="uP6-fe-35z" firstAttribute="top" secondItem="eGF-Ws-JzQ" secondAttribute="top" constant="8" id="YlU-z9-Zbt"/>
                                             <constraint firstItem="a78-Ow-5xf" firstAttribute="leading" secondItem="eGF-Ws-JzQ" secondAttribute="leading" constant="157" id="aIn-kK-ays"/>
                                             <constraint firstItem="a78-Ow-5xf" firstAttribute="top" secondItem="eGF-Ws-JzQ" secondAttribute="top" constant="3" id="tHf-Li-g43"/>
                                         </constraints>
