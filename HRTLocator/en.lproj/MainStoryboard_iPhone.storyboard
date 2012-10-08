@@ -229,67 +229,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwl-Ud-0ol">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZu-YX-cIs">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="73" id="UJi-Bh-CDH"/>
-                                            <constraint firstAttribute="height" constant="44" id="wXT-Dm-jOP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" image="bushigh@2x.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-Ws-JzQ" userLabel="bushigh">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-0L-O33" userLabel="backimage">
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="NBm-99-4Vf"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a78-Ow-5xf">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="56H-fb-DSI"/>
-                                                    <constraint firstAttribute="height" constant="20" id="w0P-uR-1OU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="getCurrentMapCenter" destination="2" eventType="touchDown" id="7yl-zg-5Bm"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="wjb-0L-O33" firstAttribute="leading" secondItem="eGF-Ws-JzQ" secondAttribute="leading" type="default" id="1WI-eN-KSG"/>
-                                            <constraint firstAttribute="width" constant="320" id="2A0-Ov-LhL"/>
-                                            <constraint firstItem="wjb-0L-O33" firstAttribute="trailing" secondItem="eGF-Ws-JzQ" secondAttribute="trailing" type="default" id="NbK-uC-gaN"/>
-                                            <constraint firstItem="wjb-0L-O33" firstAttribute="top" secondItem="eGF-Ws-JzQ" secondAttribute="top" type="default" id="Rud-0a-nZ2"/>
-                                            <constraint firstAttribute="height" constant="35" id="VkM-fB-xRD"/>
-                                            <constraint firstItem="a78-Ow-5xf" firstAttribute="leading" secondItem="eGF-Ws-JzQ" secondAttribute="leading" constant="157" id="aIn-kK-ays"/>
-                                            <constraint firstItem="a78-Ow-5xf" firstAttribute="top" secondItem="eGF-Ws-JzQ" secondAttribute="top" constant="3" id="tHf-Li-g43"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="eGF-Ws-JzQ" firstAttribute="top" secondItem="Hwl-Ud-0ol" secondAttribute="top" constant="198" id="8Qz-8q-k6j"/>
-                                    <constraint firstAttribute="bottom" secondItem="eGF-Ws-JzQ" secondAttribute="bottom" constant="271" id="Iqp-q4-del"/>
-                                    <constraint firstAttribute="trailing" secondItem="eGF-Ws-JzQ" secondAttribute="trailing" constant="17" id="R4o-ct-UeL"/>
-                                    <constraint firstItem="eGF-Ws-JzQ" firstAttribute="leading" secondItem="Hwl-Ud-0ol" secondAttribute="leading" constant="-17" id="SQ3-AS-KxR"/>
-                                    <constraint firstItem="rZu-YX-cIs" firstAttribute="leading" secondItem="Hwl-Ud-0ol" secondAttribute="leading" constant="215" id="jfG-za-YIr"/>
-                                    <constraint firstItem="rZu-YX-cIs" firstAttribute="top" secondItem="Hwl-Ud-0ol" secondAttribute="top" constant="65" id="jhT-ff-Lhv"/>
-                                </constraints>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="kW9-lG-a9u">
                                 <items>
@@ -525,7 +466,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bushigh@2x.png" width="16" height="16"/>
         <image name="fp_icon.png" width="75" height="71"/>
         <image name="hrticon.png" width="50" height="34"/>
         <image name="location.png" width="34" height="29"/>
