@@ -20,6 +20,7 @@
     UIImageView *favImage;
     UIImageView *backImage;
     UIButton *viewRoute;
+    UIButton *closeOverlay;
 }
 
 @property NSInteger initialZoom;
@@ -29,9 +30,10 @@
 @property (nonatomic, retain) IBOutlet UIView *bushigh;
 @property (nonatomic, retain) IBOutlet UIButton *favorite;
 @property (nonatomic, retain) IBOutlet UIButton *viewRoute;
+@property (nonatomic, retain) IBOutlet UIButton *closeOverlay;
 @property (nonatomic, retain) IBOutlet UIImageView *favImage;
-@property (nonatomic, retain) IBOutlet UIImageView *backImage;
 -(IBAction)updatelocation;
 -(IBAction)getCurrentMapCenter;
+-(IBAction)closeOverlayView;
 
 @end

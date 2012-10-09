@@ -19,7 +19,7 @@
 @synthesize mapLoad;
 @synthesize favorite;
 @synthesize favImage;
-@synthesize backImage;
+@synthesize closeOverlay;
 @synthesize viewRoute;
 
 
@@ -62,24 +62,8 @@
                          }
                          completion:nil];
     }
-    else
-    {
-        [UIView animateWithDuration:.8
-                              delay:0.0
-                            options: UIViewAnimationCurveEaseInOut
-                         animations:^{
-                             bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 60);
-                             viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y + 60);
-                         }
-                         completion:^(BOOL finished){
-                             // Wait one second and then fade in the view
-                            bushigh.layer.hidden = true;
-        }];
-         
-    }
+
     
-
-
 }
 
 -(IBAction)getCurrentMapCenter{
@@ -97,6 +81,27 @@
     UIImage *favimage = [UIImage imageNamed:@"star.png"];
     [favImage setImage:favimage];
 }
+
+
+-(IBAction)closeOverlayView{
+    
+    if (bushigh.layer.hidden == false)
+    {
+        [UIView animateWithDuration:.8 delay:0.0 options: UIViewAnimationCurveEaseInOut
+            animations:^{
+                bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 60);
+                viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y + 60);
+            }
+            completion:^(BOOL finished){
+                bushigh.layer.hidden = true;
+            }
+         ];
+    }
+   
+}
+
+
+
 
 - (void)viewDidLoad
 {
