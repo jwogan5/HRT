@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "MapViewController.h"
 
 @interface SettingViewController ()
 
@@ -25,10 +26,13 @@
     [defaults setInteger:constantLocation forKey:@"constantLocation"];
     [defaults synchronize];
     
+    // Need to call calling window
+    [_delegate didSomethingHappen:@"closedsettings"];
     
     // Close the Modal Settings Window
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +57,8 @@
     locSettingsTable.layer.shadowOpacity = .90f;
     locSettingsTable.layer.shadowRadius = 3.0f;
      */
+    
+    
 }
 
 

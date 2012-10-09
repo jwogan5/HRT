@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+@protocol ModalViewDelegate;
+
 @interface BusRouteViewController : UIViewController{
 
 }
+
+@property (nonatomic, weak) id<ModalViewDelegate> delegate;
 
 -(IBAction)closeMe;
 

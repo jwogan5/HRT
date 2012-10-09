@@ -21,6 +21,10 @@
 @synthesize favImage;
 @synthesize closeOverlay;
 @synthesize viewRoute;
+@synthesize busNumber;
+@synthesize busTitle;
+@synthesize routeNumber;
+@synthesize routeTitle;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,6 +36,48 @@
     }
     return self;
 }
+
+- (void)didSomethingHappen:(NSString *)message {
+    if ([message isEqualToString:(@"closedsettings")])
+    {
+       if (bushigh.layer.hidden == true)
+       {
+           [UIView animateWithDuration:0 delay:0.0 options: UIViewAnimationCurveEaseInOut
+                            animations:^{
+                                bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 60);
+                                viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y + 60);
+                                closeOverlay.center = CGPointMake(closeOverlay.center.x, closeOverlay.center.y + 60);
+                                favorite.center = CGPointMake(favorite.center.x, favorite.center.y + 60);
+                                favImage.center = CGPointMake(favImage.center.x, favImage.center.y + 60);
+                                busNumber.center = CGPointMake(busNumber.center.x, busNumber.center.y + 60);
+                                busTitle.center = CGPointMake(busTitle.center.x, busTitle.center.y + 60);
+                                routeTitle.center = CGPointMake(routeTitle.center.x, routeTitle.center.y + 60);
+                                routeNumber.center = CGPointMake(routeNumber.center.x, routeNumber.center.y + 60);
+                            }
+                            completion:^(BOOL finished){
+                                NSLog(@"sfsfs");
+                                bushigh.layer.hidden = true;
+                                closeOverlay.hidden = true;
+                                self.mapLoad = false;
+                                
+                                viewRoute.hidden = true;
+                                favImage.hidden = true;
+                                favorite.hidden = true;
+                                busTitle.hidden = true;
+                                busNumber.hidden = true;
+                                routeNumber.hidden = true;
+                                routeTitle.hidden = true;
+                            }
+            ];
+
+       }
+    }
+}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Tell AnotherViewController that you want to be the delegate
+    [segue.destinationViewController setDelegate:self];
+}
+          
 
 -(IBAction)updatelocation{
     
@@ -45,6 +91,7 @@
     {
         //bushigh.alpha = 0.0;
         bushigh.layer.hidden = false;
+        closeOverlay.hidden = false;
         [UIView animateWithDuration:.8
                               delay:0.0
                             options: UIViewAnimationCurveEaseInOut
@@ -53,11 +100,24 @@
                              {
                                 bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y - 60);
                                 viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y - 60);
+                                closeOverlay.center = CGPointMake(closeOverlay.center.x, closeOverlay.center.y - 60);
+                                favorite.center = CGPointMake(favorite.center.x, favorite.center.y - 60);
+                                favImage.center = CGPointMake(favImage.center.x, favImage.center.y - 60);
+                                busNumber.center = CGPointMake(busNumber.center.x, busNumber.center.y - 60);
+                                busTitle.center = CGPointMake(busTitle.center.x, busTitle.center.y - 60);
+                                routeTitle.center = CGPointMake(routeTitle.center.x, routeTitle.center.y - 60);
+                                routeNumber.center = CGPointMake(routeNumber.center.x, routeNumber.center.y - 60);
                              }
                              else
                              {
                                  self.mapLoad = true;
                                  viewRoute.hidden = false;
+                                 favImage.hidden = false;
+                                 favorite.hidden = false;
+                                 busTitle.hidden = false;
+                                 busNumber.hidden = false;
+                                 routeNumber.hidden = false;
+                                 routeTitle.hidden = false;
                              }                                 
                          }
                          completion:nil];
@@ -91,9 +151,17 @@
             animations:^{
                 bushigh.center = CGPointMake(bushigh.center.x, bushigh.center.y + 60);
                 viewRoute.center = CGPointMake(viewRoute.center.x, viewRoute.center.y + 60);
+                closeOverlay.center = CGPointMake(closeOverlay.center.x, closeOverlay.center.y + 60);
+                favorite.center = CGPointMake(favorite.center.x, favorite.center.y + 60);
+                favImage.center = CGPointMake(favImage.center.x, favImage.center.y + 60);
+                busNumber.center = CGPointMake(busNumber.center.x, busNumber.center.y + 60);
+                busTitle.center = CGPointMake(busTitle.center.x, busTitle.center.y + 60);
+                routeTitle.center = CGPointMake(routeTitle.center.x, routeTitle.center.y + 60);
+                routeNumber.center = CGPointMake(routeNumber.center.x, routeNumber.center.y + 60);
             }
             completion:^(BOOL finished){
                 bushigh.layer.hidden = true;
+                closeOverlay.hidden = true;
             }
          ];
     }
@@ -110,6 +178,13 @@
     // Hide the bus highlight window
     bushigh.layer.hidden = true;
     viewRoute.hidden = true;
+    closeOverlay.hidden = true;
+    favImage.hidden = true;
+    favorite.hidden = true;
+    busTitle.hidden = true;
+    busNumber.hidden = true;
+    routeNumber.hidden = true;
+    routeTitle.hidden = true;
     self.mapLoad = false;
     
     // Create Bus Array

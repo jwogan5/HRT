@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+@protocol ModalViewDelegate;
+
 @interface SettingViewController : UIViewController{
     //UITableView *locSettingsTable;
 }
 
 //@property (nonatomic, retain) IBOutlet UITableView *locSettingsTable;
-
+@property (nonatomic, weak) id<ModalViewDelegate> delegate;
 
 @end

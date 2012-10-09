@@ -11,9 +11,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
 #import "Bus.h"
+#import "SettingViewController.h"
+
+@protocol ModalViewDelegate
+- (void)didSomethingHappen:(NSString *)message;
+@end
 
 
-@interface MapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>{
+@interface MapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate,ModalViewDelegate>{
     MKMapView *mapView;
     UIView *bushigh;
     UIButton *favorite;
@@ -21,6 +26,10 @@
     UIImageView *backImage;
     UIButton *viewRoute;
     UIButton *closeOverlay;
+    UILabel *busTitle;
+    UILabel *busNumber;
+    UILabel *routeTitle;
+    UILabel *routeNumber;
 }
 
 @property NSInteger initialZoom;
@@ -32,6 +41,11 @@
 @property (nonatomic, retain) IBOutlet UIButton *viewRoute;
 @property (nonatomic, retain) IBOutlet UIButton *closeOverlay;
 @property (nonatomic, retain) IBOutlet UIImageView *favImage;
+@property (nonatomic, retain) IBOutlet UILabel *busTitle;
+@property (nonatomic, retain) IBOutlet UILabel *busNumber;
+@property (nonatomic, retain) IBOutlet UILabel *routeTitle;
+@property (nonatomic, retain) IBOutlet UILabel *routeNumber;
+
 -(IBAction)updatelocation;
 -(IBAction)getCurrentMapCenter;
 -(IBAction)closeOverlayView;

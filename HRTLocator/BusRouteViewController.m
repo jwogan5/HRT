@@ -7,6 +7,7 @@
 //
 
 #import "BusRouteViewController.h"
+#import "MapViewController.h"
 
 @interface BusRouteViewController ()
 
@@ -25,9 +26,14 @@
     return self;
 }
 
+
+
 -(IBAction)closeMe{
     
     NSLog(@"clicked done button within bus route view ...");
+    
+    // Need to call calling window
+    [_delegate didSomethingHappen:@"closedbusroute"];
     
     // Close the Modal Settings Window
     [self dismissViewControllerAnimated:YES completion:nil];
