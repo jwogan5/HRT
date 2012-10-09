@@ -50,6 +50,10 @@
 		968AC0B9161BF14F00601470 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968AC0B8161BF14F00601470 /* MapViewController.m */; };
 		968AC0BB161C175600601470 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968AC0BA161C175600601470 /* CoreLocation.framework */; };
 		968AC0BE161C1C6E00601470 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968AC0BD161C1C6E00601470 /* SettingViewController.m */; };
+		968C1CA916247D4B000CB61E /* tableby2.png in Resources */ = {isa = PBXBuildFile; fileRef = 968C1CA716247D4B000CB61E /* tableby2.png */; };
+		968C1CAA16247D4B000CB61E /* tableby2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 968C1CA816247D4B000CB61E /* tableby2@2x.png */; };
+		968C1CAD1624845F000CB61E /* fp.png in Resources */ = {isa = PBXBuildFile; fileRef = 968C1CAC1624845F000CB61E /* fp.png */; };
+		96A8B0CE1624885B00C7C6E8 /* fp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A8B0CD1624885B00C7C6E8 /* fp@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +111,10 @@
 		968AC0BA161C175600601470 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		968AC0BC161C1C6E00601470 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		968AC0BD161C1C6E00601470 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		968C1CA716247D4B000CB61E /* tableby2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableby2.png; sourceTree = "<group>"; };
+		968C1CA816247D4B000CB61E /* tableby2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableby2@2x.png"; sourceTree = "<group>"; };
+		968C1CAC1624845F000CB61E /* fp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp.png; sourceTree = "<group>"; };
+		96A8B0CD1624885B00C7C6E8 /* fp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fp@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 		968AC088161BCD5600601470 /* HRTLocator */ = {
 			isa = PBXGroup;
 			children = (
+				968C1CAC1624845F000CB61E /* fp.png */,
 				968AC0B0161BE5AB00601470 /* hrticon.png */,
 				968AC0B1161BE5AB00601470 /* hrticon@2x.png */,
 				968AC091161BCD5600601470 /* AppDelegate.h */,
@@ -191,6 +200,9 @@
 		968AC089161BCD5600601470 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96A8B0CD1624885B00C7C6E8 /* fp@2x.png */,
+				968C1CA716247D4B000CB61E /* tableby2.png */,
+				968C1CA816247D4B000CB61E /* tableby2@2x.png */,
 				964CD16A1623ECA1003DB722 /* close.png */,
 				964CD16B1623ECA1003DB722 /* close@2x.png */,
 				964CD16C1623ECA1003DB722 /* mapover.png */,
@@ -297,6 +309,10 @@
 				964CD17B1623ECA2003DB722 /* star_no@2x.png in Resources */,
 				964CD17C1623ECA2003DB722 /* star.png in Resources */,
 				964CD17D1623ECA2003DB722 /* star@2x.png in Resources */,
+				968C1CA916247D4B000CB61E /* tableby2.png in Resources */,
+				968C1CAA16247D4B000CB61E /* tableby2@2x.png in Resources */,
+				968C1CAD1624845F000CB61E /* fp.png in Resources */,
+				96A8B0CE1624885B00C7C6E8 /* fp@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
