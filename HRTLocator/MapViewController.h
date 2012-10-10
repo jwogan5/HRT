@@ -10,8 +10,8 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
-#import "Bus.h"
 #import "SettingViewController.h"
+#import "mapCollections.h"
 
 @protocol ModalViewDelegate
 - (void)didSomethingHappen:(NSString *)message;
@@ -33,6 +33,7 @@
 }
 
 @property NSInteger initialZoom;
+@property mapCollections *mc;
 @property BOOL mapLoad;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;

@@ -14,7 +14,7 @@
     NSString *location;
     int adherence;
     int route;
-    int diection;
+    int direction;
     int stop;
     bool favorite;
     float lat;

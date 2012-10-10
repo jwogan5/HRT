@@ -25,6 +25,7 @@
 @synthesize busTitle;
 @synthesize routeNumber;
 @synthesize routeTitle;
+@synthesize mc;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -186,13 +187,11 @@
     routeTitle.hidden = true;
     self.mapLoad = false;
     
-    // Create Bus Array
-    Bus *bus = [[Bus alloc]init];
-    [bus setNumber:2035];
-    [bus setLocation:@"My Location is Home"];
-    NSLog(@"Bus number is %i",[bus getNumber]);
-    NSLog(@"Bus lat is : %f",[bus getLat]);
-    NSLog(@"Bus lon is : %f",[bus getLon]);
+    // Create Transit Array Object
+    mc = [[mapCollections alloc]init];
+    [mc loadHRTBusData];
+    
+    
     
     
     // Set is this the initial zoom

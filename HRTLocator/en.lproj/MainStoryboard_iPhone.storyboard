@@ -16,7 +16,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR2-B1-yHh" userLabel="hrtTitle">
                                 <color key="tintColor" red="0.0" green="0.39215686274509803" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="HRT Bus Locator" id="a1C-N1-Nhz">
+                                    <navigationItem title="HRTransit Locator" id="a1C-N1-Nhz">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="ycc-8k-MEb">
                                             <button key="customView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1dK-Zx-TEg">
                                                 <rect key="frame" x="289" y="8" width="26" height="28"/>
@@ -226,17 +226,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LdX-RB-bfA" firstAttribute="centerY" secondItem="WR2-B1-yHh" secondAttribute="centerY" type="default" id="4vU-Kx-Sq9"/>
                             <constraint firstItem="WR2-B1-yHh" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="CXG-LG-fyH"/>
                             <constraint firstItem="UaZ-65-fv4" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Cwg-7R-IqW"/>
                             <constraint firstItem="LdX-RB-bfA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="7" id="Kae-V4-ByB"/>
+                            <constraint firstItem="LdX-RB-bfA" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="LfK-z9-jcb"/>
                             <constraint firstItem="UaZ-65-fv4" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="cyJ-vo-46k"/>
                             <constraint firstItem="UaZ-65-fv4" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="dg7-F7-FRY"/>
                             <constraint firstItem="qqj-Ei-fTD" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="g44-UW-0FV"/>
-                            <constraint firstItem="LdX-RB-bfA" firstAttribute="centerY" secondItem="WR2-B1-yHh" secondAttribute="centerY" type="default" id="gzA-Q4-Y0i"/>
                             <constraint firstItem="qqj-Ei-fTD" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="jQX-Gf-6KZ"/>
                             <constraint firstItem="qqj-Ei-fTD" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="mBb-h5-y5R"/>
                             <constraint firstItem="WR2-B1-yHh" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nrv-Le-aMd"/>
-                            <constraint firstItem="LdX-RB-bfA" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="otJ-9b-s4i"/>
                             <constraint firstItem="WR2-B1-yHh" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="shZ-6I-6YY"/>
                             <constraint firstItem="UaZ-65-fv4" firstAttribute="top" secondItem="WR2-B1-yHh" secondAttribute="bottom" type="default" id="w3A-IB-F74"/>
                         </constraints>
