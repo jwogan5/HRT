@@ -55,7 +55,6 @@
                                 routeNumber.center = CGPointMake(routeNumber.center.x, routeNumber.center.y + 60);
                             }
                             completion:^(BOOL finished){
-                                NSLog(@"sfsfs");
                                 bushigh.layer.hidden = true;
                                 closeOverlay.hidden = true;
                                 self.mapLoad = false;
