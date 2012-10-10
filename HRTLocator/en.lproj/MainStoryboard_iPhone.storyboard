@@ -346,7 +346,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Always On will continually track your location but will decrease battery faster." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="rwU-QW-c1Q">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Always On will continually track your location but will decrease the battery life faster." lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="rwU-QW-c1Q">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="SFp-cc-mpo"/>
                                             <constraint firstAttribute="width" constant="275" id="k5f-Bn-eCM"/>
@@ -474,6 +474,38 @@
         <image name="star_no.png" width="25" height="25"/>
         <image name="tableby2.png" width="305" height="90"/>
     </resources>
+    <classes>
+        <class className="BusRouteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BusRouteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeMe"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeOverlayView"/>
+                <relationship kind="action" name="getCurrentMapCenter"/>
+                <relationship kind="action" name="updatelocation"/>
+                <relationship kind="outlet" name="busNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="busTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bushigh" candidateClass="UIView"/>
+                <relationship kind="outlet" name="closeOverlay" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="favImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="favorite" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="routeNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="routeTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewRoute" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SettingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

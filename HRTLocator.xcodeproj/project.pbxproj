@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		96058E99161D2BD500C01830 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96058E98161D2BD500C01830 /* QuartzCore.framework */; };
-		96058E9C161D3B5000C01830 /* setting_2_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 96058E9B161D3B5000C01830 /* setting_2_table.png */; };
-		96058E9E161D3F8A00C01830 /* fp_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96058E9D161D3F8A00C01830 /* fp_icon.png */; };
 		961C58BD161F6A2700AC5138 /* slideFromLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C58BC161F6A2700AC5138 /* slideFromLeft.m */; };
 		961C58C0161F6F6300AC5138 /* BusRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C58BF161F6F6300AC5138 /* BusRouteViewController.m */; };
 		961C58C3161F7CBF00AC5138 /* slideFromRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C58C2161F7CBF00AC5138 /* slideFromRight.m */; };
@@ -58,8 +56,6 @@
 
 /* Begin PBXFileReference section */
 		96058E98161D2BD500C01830 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		96058E9B161D3B5000C01830 /* setting_2_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting_2_table.png; path = ../../../../setting_2_table.png; sourceTree = "<group>"; };
-		96058E9D161D3F8A00C01830 /* fp_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fp_icon.png; path = ../../../../fp_icon.png; sourceTree = "<group>"; };
 		961C58BB161F6A2700AC5138 /* slideFromLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slideFromLeft.h; sourceTree = "<group>"; };
 		961C58BC161F6A2700AC5138 /* slideFromLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slideFromLeft.m; sourceTree = "<group>"; };
 		961C58BE161F6F6300AC5138 /* BusRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusRouteViewController.h; sourceTree = "<group>"; };
@@ -213,8 +209,6 @@
 				964CD1711623ECA1003DB722 /* star_no@2x.png */,
 				964CD1721623ECA1003DB722 /* star.png */,
 				964CD1731623ECA1003DB722 /* star@2x.png */,
-				96058E9D161D3F8A00C01830 /* fp_icon.png */,
-				96058E9B161D3B5000C01830 /* setting_2_table.png */,
 				96483DB6161CD5BC002F62C2 /* location.png */,
 				96483DB7161CD5BC002F62C2 /* location@2x.png */,
 				96483DB8161CD5BC002F62C2 /* settings.png */,
@@ -296,8 +290,6 @@
 				96483DBB161CD5BC002F62C2 /* location@2x.png in Resources */,
 				96483DBC161CD5BC002F62C2 /* settings.png in Resources */,
 				96483DBD161CD5BC002F62C2 /* settings@2x.png in Resources */,
-				96058E9C161D3B5000C01830 /* setting_2_table.png in Resources */,
-				96058E9E161D3F8A00C01830 /* fp_icon.png in Resources */,
 				964CD1691623EC07003DB722 /* MyHomeOffice.gpx in Resources */,
 				964CD1741623ECA2003DB722 /* close.png in Resources */,
 				964CD1751623ECA2003DB722 /* close@2x.png in Resources */,
