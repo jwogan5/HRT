@@ -43,5 +43,39 @@
     return adherence;
 }
 
+-(void)setRoute:(int)a{
+    route = a;
+}
+-(int)getRoute{
+    return route;
+}
+
+-(void)setDirection:(int)a{
+    direction = a;
+}
+-(int)getDirection{
+    return direction;
+}
+
+-(void)setStop:(int)a{
+    stop = a;
+}
+-(int)getStop{
+    return stop;
+}
+
+-(void)setFavorite:(bool)b{
+    favorite = b;
+}
+-(int)getFavorite{
+    return favorite;
+}
+
+-(void)setLastUpdate:(int)a{
+    lastUpdate = a;
+}
+-(int)getLastUpdate{
+    return lastUpdate;
+}
 
 @end

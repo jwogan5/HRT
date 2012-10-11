@@ -36,4 +36,24 @@
 -(void)setAdherence:(int)a;
 -(int)getAdherence;
 
+// Set and Get the Bus route
+-(void)setRoute:(int)a;
+-(int)getRoute;
+
+// Set and Get the Bus direction
+-(void)setDirection:(int)a;
+-(int)getDirection;
+
+// Set and Get the Bus stop
+-(void)setStop:(int)a;
+-(int)getStop;
+
+// Set and Get the Bus favorite
+-(void)setFavorite:(bool)b;
+-(int)getFavorite;
+
+// Set and Get the Bus last update
+-(void)setLastUpdate:(int)a;
+-(int)getLastUpdate;
+
 @end

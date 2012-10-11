@@ -15,15 +15,32 @@
 
 -(void)loadHRTBusData{
     
+    // Get Bus Favorites Array
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *busFavs = [defaults objectForKey:@"myFavoritesBus"];
+    
     int totalBusCount = [busData count];
+    int totalFavs = [busFavs count];
+    
+    if (totalBusCount == 0)
+       busData = [[NSMutableArray alloc] init];
     
     // Loop over bus Data and set lastupdate
     if ([busData count] > 0)
-    {
-         // Set LastUpdate to plus 1
-        
-         // if last update becomes 5 then reomove it from the array
-            // subtract one from totalBusCount
+    { 
+        for (int ld=0; ld < totalBusCount; ld++)
+        {
+            Bus *currentBus = [busData objectAtIndex:ld];
+            int currentLastUpdate = [currentBus getLastUpdate];
+            currentLastUpdate++;
+            
+            // Remove the object at the index
+            [busData removeObjectAtIndex:ld];
+            
+            // Add the object back in
+            if (currentLastUpdate >= 5)
+                [busData insertObject:currentBus atIndex:ld];
+        }
     }
     
     // Get the Bus Data from HRT
@@ -41,52 +58,62 @@
             {
                 // Temp vars
                 bool found = false;
-                bool routeDataPresent = false;
-                
-                // Do we have route data
-                if ([hrtLineDataArray count] > 7)
-                    routeDataPresent = true;
+                int foundIndex;
+                int currentBusNumber = [[hrtLineDataArray objectAtIndex:(2)] intValue];
                 
                 // Build the Bus Object
                 Bus *bus = [[Bus alloc]init];
-                [bus setNumber:[[hrtLineDataArray objectAtIndex:(2)] intValue]];
+                [bus setNumber:currentBusNumber];
                 [bus setLocation:[hrtLineDataArray objectAtIndex:(3)]];
+                [bus setLastUpdate:1];
                 
-                /*
-                int adherence;
-                int route;
-                int direction;
-                int stop;
-                */
+                // Build Bus Extra Data
+                if ( [[hrtLineDataArray objectAtIndex:(6)] isEqualToString:[[NSString alloc] initWithFormat:@"V"]] )
+                    [bus setAdherence:[[hrtLineDataArray objectAtIndex:(5)] intValue]];
+                else
+                    [bus setAdherence:0];
+                
+                // Set Bus Favorite
+                [bus setFavorite:false];
+                for (int f = 0; f < totalFavs; f++)
+                {
+                    int cfav = [[busFavs objectAtIndex:f] intValue];
+                    if ([bus getNumber] == cfav)
+                        [bus setFavorite:true];
+                }
+                 
+                // Do we have route data
+                if ([hrtLineDataArray count] > 7)
+                {
+                    [bus setRoute:[[hrtLineDataArray objectAtIndex:(7)] intValue]];
+                    [bus setDirection:[[hrtLineDataArray objectAtIndex:(8)] intValue]];
+                    [bus setStop:[[hrtLineDataArray objectAtIndex:(9)] intValue]];
+                }
+                
                 // Does Bus Object Exist
                 for ( int b = 0; b < totalBusCount; b++)
                 {
-                    
+                    Bus *currentBus = [busData objectAtIndex:b];
+                    int busNum = [currentBus getNumber];
+                    if (busNum == currentBusNumber)
+                    {
+                        found = true;
+                        foundIndex = b;
+                    }
                 }
                 
-                if (found == false)
+                if (found == true)
                 {
-                    // if yes then update current bus object
-                    //NSLog(@"The Bus Number is : %@",lineBusNum);
+                    [busData removeObjectAtIndex:foundIndex];
+                    [busData insertObject:bus atIndex:foundIndex];
                 }
                 else
                 {
-                    // if not make a new bus object in array
+                    [busData addObject:bus];
                 }
             }
         }
     }
-    
-    
-    // Add Bus Node to busData Array
-    /*
-    
-    NSLog(@"Bus number is %i",[bus getNumber]);
-    NSLog(@"Bus lat is : %f",[bus getLat]);
-    NSLog(@"Bus lon is : %f",[bus getLon]);
-     */
-    
-
 }
 
 

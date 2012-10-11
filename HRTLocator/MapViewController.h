@@ -12,6 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SettingViewController.h"
 #import "mapCollections.h"
+#import "Bus.h"
 
 @protocol ModalViewDelegate
 - (void)didSomethingHappen:(NSString *)message;
@@ -32,6 +33,8 @@
     UILabel *routeNumber;
 }
 
+@property NSMutableArray *arBusFavs;
+@property NSInteger constantLocation;
 @property NSInteger initialZoom;
 @property mapCollections *mc;
 @property BOOL mapLoad;

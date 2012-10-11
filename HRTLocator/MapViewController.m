@@ -26,17 +26,11 @@
 @synthesize routeNumber;
 @synthesize routeTitle;
 @synthesize mc;
+@synthesize arBusFavs;
+@synthesize constantLocation;
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        NSLog(@"here");
-    }
-    return self;
-}
+
 
 - (void)didSomethingHappen:(NSString *)message {
     if ([message isEqualToString:(@"closedsettings")])
@@ -73,10 +67,7 @@
        }
     }
 }
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Tell AnotherViewController that you want to be the delegate
-    [segue.destinationViewController setDelegate:self];
-}
+
           
 
 -(IBAction)updatelocation{
@@ -186,27 +177,23 @@
     routeNumber.hidden = true;
     routeTitle.hidden = true;
     self.mapLoad = false;
-    
-    // Create Transit Array Object
-    mc = [[mapCollections alloc]init];
-    [mc loadHRTBusData];
-    
-    
-    
-    
-    // Set is this the initial zoom
     self.initialZoom = 0;
-  
+    
     // Get all user default settings for the app
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"constantLocation"] != nil)
     {
-        //constantLocation = [defaults integerForKey:@"constantLocation"];
-        // read in variables that I might need in this method
+        self.constantLocation = [defaults integerForKey:@"constantLocation"];
+        self.arBusFavs = [defaults objectForKey:@"myFavoritesBus"];
     }
     else
     {
-        [defaults setInteger:0 forKey:@"constantLocation"];
+        // Initialize Vars
+        self.arBusFavs = [[NSMutableArray alloc] init];
+        self.constantLocation = 0;
+        
+        [defaults setInteger:self.constantLocation forKey:@"constantLocation"];
+        [defaults setObject:self.arBusFavs forKey:@"myFavoritesBus"];
         [defaults synchronize];
     }
 
@@ -228,7 +215,23 @@
     if([CLLocationManager locationServicesEnabled]){
         [self.locationManager startUpdatingLocation];
     }
+    
+    
+    // Create Transit Array Object
+    mc = [[mapCollections alloc]init];
+    [mc loadHRTBusData];
+    NSMutableArray *busLocationData = [mc getBusData];
+    Bus *currentBus = [busLocationData objectAtIndex:0];
+    int cbusNum = [currentBus getNumber];
+    
 }
+
+
+
+
+
+
+
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
@@ -252,14 +255,24 @@
     }
     
     // Turn off location services if the user wants it that way
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    int constantLocation = [defaults integerForKey:@"constantLocation"];
-    if (constantLocation != 1)
+    if (self.constantLocation != 1)
         [manager stopUpdatingLocation];
-
-    NSLog(@"The constant location services are set to:%i",constantLocation);
 }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        NSLog(@"here");
+    }
+    return self;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Tell AnotherViewController that you want to be the delegate
+    [segue.destinationViewController setDelegate:self];
+}
 
 - (void)didReceiveMemoryWarning
 {
