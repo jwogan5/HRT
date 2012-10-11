@@ -14,7 +14,6 @@
 @end
 
 @implementation SettingViewController
-//@synthesize locSettingsTable;
 
 
 - (IBAction) done {

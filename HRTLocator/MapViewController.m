@@ -65,6 +65,7 @@
             ];
 
        }
+       [self plotMapCollections];
     }
 }
 
@@ -217,16 +218,56 @@
     }
     
     
-    // Create Transit Array Object
-    mc = [[mapCollections alloc]init];
-    [mc loadHRTBusData];
-    NSMutableArray *busLocationData = [mc getBusData];
-    Bus *currentBus = [busLocationData objectAtIndex:0];
-    int cbusNum = [currentBus getNumber];
+    // Start Plotting the Annotations
+    [self plotMapCollections];
+    [NSTimer scheduledTimerWithTimeInterval:45 target:self selector:@selector(plotMapCollections) userInfo:nil repeats:YES];
     
 }
 
 
+-(void)plotMapCollections{
+  
+    // Plot the Bus Points if Turned on in the Settings
+    bool showbuspins = true;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if ([defaults objectForKey:@"showbuspins"] != nil)
+        showbuspins = [defaults boolForKey:@"showbuspins"];
+    else
+    {
+        [defaults setBool:true forKey:@"showbuspins"];
+        [defaults synchronize];
+    }
+    
+    if (showbuspins == true)
+    {
+        NSLog(@"Plotting the bus pins");
+        mc = [[mapCollections alloc]init];
+        [mc loadHRTBusData];
+        NSMutableArray *busLocationData = [mc getBusData];
+        Bus *currentBus = [busLocationData objectAtIndex:0];
+        int cbusNum = [currentBus getNumber];
+        double cbuslat = [currentBus getLat];
+        double cbuslon = [currentBus getLon];
+        NSLog(@"the latitude of the first bus: %f",cbuslon);
+    }
+    
+
+    // Plot the Museum Points if Turned on in the Settings
+    bool showmuseumpins = true;
+    if ([defaults objectForKey:@"showmuseumpins"] != nil)
+        showmuseumpins = [defaults boolForKey:@"showmuseumpins"];
+    else
+    {
+        [defaults setBool:true forKey:@"showmuseumpins"];
+        [defaults synchronize];
+    }
+    
+    if (showmuseumpins == true)
+    {
+        NSLog(@"Plotting the museum pins");
+    }
+}
 
 
 

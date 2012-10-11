@@ -20,8 +20,18 @@
 
 -(void)setLocation:(NSString *) a{
     location = a;
-    lat=36.8463754;
-    lon=-76.4590385;
+    
+    // Split the location on slash
+    NSArray *gpsArray = [a componentsSeparatedByString:@"/"];
+    NSString *gpslat = [gpsArray objectAtIndex:0];
+    NSString *gpslon = [gpsArray objectAtIndex:1];
+    NSString *gpslatbegin = [gpslat substringWithRange:NSMakeRange(0,2)];
+    NSString *gpslonbegin = [gpslon substringWithRange:NSMakeRange(0,3)];
+    NSString *gpslatend = [gpslat substringWithRange:NSMakeRange(2,gpslat.length - 2)];
+    NSString *gpslonend = [gpslon substringWithRange:NSMakeRange(3,gpslon.length - 3)];
+    
+    lat = [[NSString stringWithFormat:@"%@%s%@", gpslatbegin, ".", gpslatend] floatValue];
+    lon = [[NSString stringWithFormat:@"%@%s%@", gpslonbegin, ".", gpslonend] floatValue];
 }
 
 -(NSString *)getLocation{

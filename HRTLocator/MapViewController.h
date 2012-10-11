@@ -49,9 +49,12 @@
 @property (nonatomic, retain) IBOutlet UILabel *busNumber;
 @property (nonatomic, retain) IBOutlet UILabel *routeTitle;
 @property (nonatomic, retain) IBOutlet UILabel *routeNumber;
+@property (nonatomic, weak) id<ModalViewDelegate> delegate;
 
 -(IBAction)updatelocation;
 -(IBAction)getCurrentMapCenter;
 -(IBAction)closeOverlayView;
+-(void)plotMapCollections;
+
 
 @end
