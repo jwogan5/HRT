@@ -16,19 +16,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR2-B1-yHh" userLabel="hrtTitle">
                                 <color key="tintColor" red="0.0" green="0.39215686274509803" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="HRTransit Locator" id="a1C-N1-Nhz">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ycc-8k-MEb">
-                                            <button key="customView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1dK-Zx-TEg">
-                                                <rect key="frame" x="289" y="8" width="26" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="whitepin.png"/>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="HRTransit Locator" id="a1C-N1-Nhz"/>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="hrticon.png" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-RB-bfA">
@@ -353,19 +341,19 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Bus Pins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLq-x3-ImG">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Bus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLq-x3-ImG">
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="81" id="7Kg-f1-bod"/>
                                             <constraint firstAttribute="height" constant="21" id="Cjb-xi-Mqb"/>
-                                            <constraint firstAttribute="width" constant="185" id="hze-2H-Imq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Museum, etc. Pins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-Z6-3dL">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Museum, etc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-Z6-3dL">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="1Cw-gu-SHX"/>
-                                            <constraint firstAttribute="width" constant="180" id="zvG-RU-uJJ"/>
+                                            <constraint firstAttribute="width" constant="149" id="xOw-9T-x4G"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -436,6 +424,7 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="Obn-vK-Bxm" firstAttribute="centerY" secondItem="gmI-E6-iZB" secondAttribute="centerY" type="default" id="1lW-fQ-Tga"/>
                                     <constraint firstItem="VkK-Uv-oIJ" firstAttribute="centerX" secondItem="Pjp-vc-Bgq" secondAttribute="centerX" type="default" id="5wg-rx-4nv"/>
                                     <constraint firstItem="1JR-fn-hTS" firstAttribute="leading" secondItem="RHo-Vj-wbW" secondAttribute="leading" type="default" id="6Nk-fR-KhQ"/>
                                     <constraint firstItem="RHo-Vj-wbW" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="322" id="8Cq-tX-40a"/>
@@ -443,20 +432,20 @@
                                     <constraint firstItem="Z1H-QX-95N" firstAttribute="leading" secondItem="a2I-1Z-39f" secondAttribute="leading" type="default" id="9DM-gn-PUe"/>
                                     <constraint firstItem="VkK-Uv-oIJ" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="454" id="9lf-gz-k47"/>
                                     <constraint firstItem="gmI-E6-iZB" firstAttribute="centerX" secondItem="rwU-QW-c1Q" secondAttribute="centerX" type="default" id="Aua-xi-Xpa"/>
-                                    <constraint firstItem="gmI-E6-iZB" firstAttribute="centerY" secondItem="1JR-fn-hTS" secondAttribute="centerY" type="default" id="Bj8-v3-s6J"/>
                                     <constraint firstItem="U7f-pg-3Cb" firstAttribute="leading" secondItem="RHo-Vj-wbW" secondAttribute="leading" type="default" id="BuQ-2g-Iej"/>
                                     <constraint firstItem="Z1H-QX-95N" firstAttribute="baseline" secondItem="LDm-Ys-PyG" secondAttribute="baseline" type="default" id="CAL-cI-yFs"/>
                                     <constraint firstItem="OWh-pp-yBI" firstAttribute="leading" secondItem="x4e-fE-Y0O" secondAttribute="leading" type="default" id="D2B-Wu-B0J"/>
                                     <constraint firstItem="LDm-Ys-PyG" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="407" id="E8p-3t-8mC"/>
                                     <constraint firstItem="h4H-Mt-gKO" firstAttribute="leading" secondItem="nOG-e2-Oak" secondAttribute="leading" type="default" id="GXl-2W-22T"/>
+                                    <constraint firstItem="h4H-Mt-gKO" firstAttribute="bottom" secondItem="52G-Nl-fj8" secondAttribute="bottom" type="default" id="HWo-sj-57I"/>
                                     <constraint firstItem="gmI-E6-iZB" firstAttribute="top" secondItem="2CK-mi-7cQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hrs-C0-xjg"/>
+                                    <constraint firstItem="iLq-x3-ImG" firstAttribute="bottom" secondItem="dWw-l1-KGQ" secondAttribute="bottom" type="default" id="J5t-8d-m4d"/>
                                     <constraint firstItem="RHo-Vj-wbW" firstAttribute="trailing" secondItem="nOG-e2-Oak" secondAttribute="trailing" type="default" id="LGN-ff-ieK"/>
                                     <constraint firstItem="LDm-Ys-PyG" firstAttribute="top" secondItem="Z1H-QX-95N" secondAttribute="top" type="default" id="M0n-rN-RdL"/>
                                     <constraint firstItem="Obn-vK-Bxm" firstAttribute="trailing" secondItem="a2I-1Z-39f" secondAttribute="trailing" type="default" id="MRN-88-Ik8"/>
                                     <constraint firstItem="dWw-l1-KGQ" firstAttribute="leading" secondItem="a2I-1Z-39f" secondAttribute="leading" type="default" id="NgY-66-hds"/>
                                     <constraint firstItem="1JR-fn-hTS" firstAttribute="leading" secondItem="bWx-Z6-3dL" secondAttribute="leading" type="default" id="Ntb-fB-Y38"/>
                                     <constraint firstItem="rwU-QW-c1Q" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="180" id="Sah-hv-Juv"/>
-                                    <constraint firstItem="bWx-Z6-3dL" firstAttribute="centerY" secondItem="a2I-1Z-39f" secondAttribute="centerY" type="default" id="Ujr-Ll-wFB"/>
                                     <constraint firstItem="VkK-Uv-oIJ" firstAttribute="bottom" secondItem="Pjp-vc-Bgq" secondAttribute="bottom" type="default" id="UsU-dx-Ami"/>
                                     <constraint firstItem="52G-Nl-fj8" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="54" id="W6Q-rq-7oN"/>
                                     <constraint firstItem="bDp-VR-Ri4" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="262" id="WJ7-Pd-5el"/>
@@ -471,16 +460,15 @@
                                     <constraint firstItem="Obn-vK-Bxm" firstAttribute="centerY" secondItem="1JR-fn-hTS" secondAttribute="centerY" type="default" id="esx-Dg-XNQ"/>
                                     <constraint firstItem="nOG-e2-Oak" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="25" id="fDr-fH-fUp"/>
                                     <constraint firstItem="a2I-1Z-39f" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="139" id="iDX-Xq-e4o"/>
+                                    <constraint firstItem="bWx-Z6-3dL" firstAttribute="bottom" secondItem="a2I-1Z-39f" secondAttribute="bottom" type="default" id="kjX-ZW-bJI"/>
                                     <constraint firstItem="iLq-x3-ImG" firstAttribute="leading" secondItem="h4H-Mt-gKO" secondAttribute="leading" type="default" id="kvI-P7-Cme"/>
                                     <constraint firstItem="2CK-mi-7cQ" firstAttribute="leading" secondItem="LDm-Ys-PyG" secondAttribute="leading" type="default" id="lJL-7S-vbS"/>
                                     <constraint firstItem="bDp-VR-Ri4" firstAttribute="top" secondItem="U7f-pg-3Cb" secondAttribute="top" type="default" id="lTb-Fy-VfH"/>
                                     <constraint firstItem="OWh-pp-yBI" firstAttribute="top" secondItem="RHo-Vj-wbW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lW1-gT-geI"/>
-                                    <constraint firstItem="h4H-Mt-gKO" firstAttribute="centerY" secondItem="52G-Nl-fj8" secondAttribute="centerY" type="default" id="pXd-MM-rhy"/>
                                     <constraint firstItem="Z1H-QX-95N" firstAttribute="trailing" secondItem="Obn-vK-Bxm" secondAttribute="trailing" type="default" id="pix-oY-kTW"/>
                                     <constraint firstItem="nOG-e2-Oak" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="13" id="syN-BN-y49"/>
                                     <constraint firstItem="x4e-fE-Y0O" firstAttribute="top" secondItem="nOG-e2-Oak" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uO4-jK-gUj"/>
                                     <constraint firstAttribute="trailing" secondItem="x4e-fE-Y0O" secondAttribute="trailing" constant="13" id="v7I-zN-XFb"/>
-                                    <constraint firstItem="dWw-l1-KGQ" firstAttribute="centerY" secondItem="iLq-x3-ImG" secondAttribute="centerY" type="default" id="vZR-RH-hmk"/>
                                     <constraint firstItem="52G-Nl-fj8" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="223" id="xp2-66-TGE"/>
                                 </constraints>
                             </scrollView>
@@ -528,7 +516,6 @@
         <image name="table_1.png" width="305" height="45"/>
         <image name="tableby2.png" width="305" height="90"/>
         <image name="tableby3.png" width="305" height="135"/>
-        <image name="whitepin.png" width="20" height="29"/>
     </resources>
     <classes>
         <class className="BusRouteViewController" superclassName="UIViewController">
