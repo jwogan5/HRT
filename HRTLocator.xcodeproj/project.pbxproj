@@ -12,6 +12,10 @@
 		6F62E2B21625C8CC00DF5D9A /* whitepin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F62E2B01625C8CC00DF5D9A /* whitepin.png */; };
 		6F62E2B31625C8CC00DF5D9A /* whitepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F62E2B11625C8CC00DF5D9A /* whitepin@2x.png */; };
 		6F62E2B61625E58C00DF5D9A /* mapCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F62E2B51625E58C00DF5D9A /* mapCollections.m */; };
+		6F9473451626FD8B00CDBAA2 /* bluepin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473411626FD8B00CDBAA2 /* bluepin.png */; };
+		6F9473461626FD8B00CDBAA2 /* bluepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473421626FD8B00CDBAA2 /* bluepin@2x.png */; };
+		6F9473471626FD8B00CDBAA2 /* redpin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473431626FD8B00CDBAA2 /* redpin.png */; };
+		6F9473481626FD8B00CDBAA2 /* redpin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473441626FD8B00CDBAA2 /* redpin@2x.png */; };
 		96058E99161D2BD500C01830 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96058E98161D2BD500C01830 /* QuartzCore.framework */; };
 		961C58BD161F6A2700AC5138 /* slideFromLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C58BC161F6A2700AC5138 /* slideFromLeft.m */; };
 		961C58C0161F6F6300AC5138 /* BusRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C58BF161F6F6300AC5138 /* BusRouteViewController.m */; };
@@ -68,6 +72,10 @@
 		6F62E2B11625C8CC00DF5D9A /* whitepin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitepin@2x.png"; sourceTree = "<group>"; };
 		6F62E2B41625E58C00DF5D9A /* mapCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapCollections.h; sourceTree = "<group>"; };
 		6F62E2B51625E58C00DF5D9A /* mapCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapCollections.m; sourceTree = "<group>"; };
+		6F9473411626FD8B00CDBAA2 /* bluepin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluepin.png; sourceTree = "<group>"; };
+		6F9473421626FD8B00CDBAA2 /* bluepin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluepin@2x.png"; sourceTree = "<group>"; };
+		6F9473431626FD8B00CDBAA2 /* redpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin.png; sourceTree = "<group>"; };
+		6F9473441626FD8B00CDBAA2 /* redpin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redpin@2x.png"; sourceTree = "<group>"; };
 		96058E98161D2BD500C01830 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961C58BB161F6A2700AC5138 /* slideFromLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slideFromLeft.h; sourceTree = "<group>"; };
 		961C58BC161F6A2700AC5138 /* slideFromLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slideFromLeft.m; sourceTree = "<group>"; };
@@ -182,6 +190,10 @@
 		968AC088161BCD5600601470 /* HRTLocator */ = {
 			isa = PBXGroup;
 			children = (
+				6F9473411626FD8B00CDBAA2 /* bluepin.png */,
+				6F9473421626FD8B00CDBAA2 /* bluepin@2x.png */,
+				6F9473431626FD8B00CDBAA2 /* redpin.png */,
+				6F9473441626FD8B00CDBAA2 /* redpin@2x.png */,
 				9663115E1626698000CF441B /* tableby3.png */,
 				9663115F1626698000CF441B /* tableby3@2x.png */,
 				6F62E2A71625B4FA00DF5D9A /* table_1.png */,
@@ -334,6 +346,10 @@
 				6F62E2B31625C8CC00DF5D9A /* whitepin@2x.png in Resources */,
 				966311601626698000CF441B /* tableby3.png in Resources */,
 				966311611626698000CF441B /* tableby3@2x.png in Resources */,
+				6F9473451626FD8B00CDBAA2 /* bluepin.png in Resources */,
+				6F9473461626FD8B00CDBAA2 /* bluepin@2x.png in Resources */,
+				6F9473471626FD8B00CDBAA2 /* redpin.png in Resources */,
+				6F9473481626FD8B00CDBAA2 /* redpin@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

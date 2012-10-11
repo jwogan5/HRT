@@ -341,19 +341,19 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Bus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLq-x3-ImG">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Bus Pins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLq-x3-ImG">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="7Kg-f1-bod"/>
+                                            <constraint firstAttribute="width" constant="110" id="BKT-gt-cdj"/>
                                             <constraint firstAttribute="height" constant="21" id="Cjb-xi-Mqb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Museum, etc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-Z6-3dL">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Attractions Pins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWx-Z6-3dL">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="1Cw-gu-SHX"/>
-                                            <constraint firstAttribute="width" constant="149" id="xOw-9T-x4G"/>
+                                            <constraint firstAttribute="width" constant="195" id="gyR-JF-yqz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -421,10 +421,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bluepin.png" translatesAutoresizingMaskIntoConstraints="NO" id="CZ5-gW-PWC"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="redpin.png" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-fB-sYb"/>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Obn-vK-Bxm" firstAttribute="centerY" secondItem="gmI-E6-iZB" secondAttribute="centerY" type="default" id="1lW-fQ-Tga"/>
+                                    <constraint firstItem="52G-Nl-fj8" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="223" id="3Ua-kv-Sf4"/>
                                     <constraint firstItem="VkK-Uv-oIJ" firstAttribute="centerX" secondItem="Pjp-vc-Bgq" secondAttribute="centerX" type="default" id="5wg-rx-4nv"/>
                                     <constraint firstItem="1JR-fn-hTS" firstAttribute="leading" secondItem="RHo-Vj-wbW" secondAttribute="leading" type="default" id="6Nk-fR-KhQ"/>
                                     <constraint firstItem="RHo-Vj-wbW" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="322" id="8Cq-tX-40a"/>
@@ -436,10 +438,12 @@
                                     <constraint firstItem="Z1H-QX-95N" firstAttribute="baseline" secondItem="LDm-Ys-PyG" secondAttribute="baseline" type="default" id="CAL-cI-yFs"/>
                                     <constraint firstItem="OWh-pp-yBI" firstAttribute="leading" secondItem="x4e-fE-Y0O" secondAttribute="leading" type="default" id="D2B-Wu-B0J"/>
                                     <constraint firstItem="LDm-Ys-PyG" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="407" id="E8p-3t-8mC"/>
+                                    <constraint firstItem="a2I-1Z-39f" firstAttribute="centerY" secondItem="OEw-fB-sYb" secondAttribute="centerY" type="default" id="EAf-eo-6d9"/>
                                     <constraint firstItem="h4H-Mt-gKO" firstAttribute="leading" secondItem="nOG-e2-Oak" secondAttribute="leading" type="default" id="GXl-2W-22T"/>
                                     <constraint firstItem="h4H-Mt-gKO" firstAttribute="bottom" secondItem="52G-Nl-fj8" secondAttribute="bottom" type="default" id="HWo-sj-57I"/>
                                     <constraint firstItem="gmI-E6-iZB" firstAttribute="top" secondItem="2CK-mi-7cQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hrs-C0-xjg"/>
                                     <constraint firstItem="iLq-x3-ImG" firstAttribute="bottom" secondItem="dWw-l1-KGQ" secondAttribute="bottom" type="default" id="J5t-8d-m4d"/>
+                                    <constraint firstItem="CZ5-gW-PWC" firstAttribute="leading" secondItem="iLq-x3-ImG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="JqN-BG-dnX"/>
                                     <constraint firstItem="RHo-Vj-wbW" firstAttribute="trailing" secondItem="nOG-e2-Oak" secondAttribute="trailing" type="default" id="LGN-ff-ieK"/>
                                     <constraint firstItem="LDm-Ys-PyG" firstAttribute="top" secondItem="Z1H-QX-95N" secondAttribute="top" type="default" id="M0n-rN-RdL"/>
                                     <constraint firstItem="Obn-vK-Bxm" firstAttribute="trailing" secondItem="a2I-1Z-39f" secondAttribute="trailing" type="default" id="MRN-88-Ik8"/>
@@ -456,20 +460,22 @@
                                     <constraint firstItem="2CK-mi-7cQ" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="233" id="cBn-PA-2Te"/>
                                     <constraint firstItem="bWx-Z6-3dL" firstAttribute="leading" secondItem="iLq-x3-ImG" secondAttribute="leading" type="default" id="dQv-bD-zYq"/>
                                     <constraint firstItem="dWw-l1-KGQ" firstAttribute="leading" secondItem="52G-Nl-fj8" secondAttribute="leading" type="default" id="dd0-pn-SIX"/>
-                                    <constraint firstItem="2CK-mi-7cQ" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="23" id="drc-7O-RbU"/>
                                     <constraint firstItem="Obn-vK-Bxm" firstAttribute="centerY" secondItem="1JR-fn-hTS" secondAttribute="centerY" type="default" id="esx-Dg-XNQ"/>
                                     <constraint firstItem="nOG-e2-Oak" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="25" id="fDr-fH-fUp"/>
                                     <constraint firstItem="a2I-1Z-39f" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="139" id="iDX-Xq-e4o"/>
-                                    <constraint firstItem="bWx-Z6-3dL" firstAttribute="bottom" secondItem="a2I-1Z-39f" secondAttribute="bottom" type="default" id="kjX-ZW-bJI"/>
+                                    <constraint firstItem="2CK-mi-7cQ" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="23" id="kXu-fs-J5Y"/>
                                     <constraint firstItem="iLq-x3-ImG" firstAttribute="leading" secondItem="h4H-Mt-gKO" secondAttribute="leading" type="default" id="kvI-P7-Cme"/>
                                     <constraint firstItem="2CK-mi-7cQ" firstAttribute="leading" secondItem="LDm-Ys-PyG" secondAttribute="leading" type="default" id="lJL-7S-vbS"/>
                                     <constraint firstItem="bDp-VR-Ri4" firstAttribute="top" secondItem="U7f-pg-3Cb" secondAttribute="top" type="default" id="lTb-Fy-VfH"/>
                                     <constraint firstItem="OWh-pp-yBI" firstAttribute="top" secondItem="RHo-Vj-wbW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lW1-gT-geI"/>
+                                    <constraint firstItem="gmI-E6-iZB" firstAttribute="centerY" secondItem="1JR-fn-hTS" secondAttribute="centerY" type="default" id="oDm-eD-iBk"/>
                                     <constraint firstItem="Z1H-QX-95N" firstAttribute="trailing" secondItem="Obn-vK-Bxm" secondAttribute="trailing" type="default" id="pix-oY-kTW"/>
                                     <constraint firstItem="nOG-e2-Oak" firstAttribute="top" secondItem="Pjp-vc-Bgq" secondAttribute="top" constant="13" id="syN-BN-y49"/>
                                     <constraint firstItem="x4e-fE-Y0O" firstAttribute="top" secondItem="nOG-e2-Oak" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uO4-jK-gUj"/>
                                     <constraint firstAttribute="trailing" secondItem="x4e-fE-Y0O" secondAttribute="trailing" constant="13" id="v7I-zN-XFb"/>
-                                    <constraint firstItem="52G-Nl-fj8" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="223" id="xp2-66-TGE"/>
+                                    <constraint firstItem="dWw-l1-KGQ" firstAttribute="centerY" secondItem="CZ5-gW-PWC" secondAttribute="centerY" type="default" id="vCV-cO-up8"/>
+                                    <constraint firstItem="a2I-1Z-39f" firstAttribute="bottom" secondItem="bWx-Z6-3dL" secondAttribute="bottom" type="default" id="yj3-i3-7Jh"/>
+                                    <constraint firstItem="OEw-fB-sYb" firstAttribute="leading" secondItem="Pjp-vc-Bgq" secondAttribute="leading" constant="193" id="z5a-IP-cYV"/>
                                 </constraints>
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6h-uC-rDF" userLabel="hrtTitle">
@@ -505,11 +511,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bluepin.png" width="17" height="25"/>
         <image name="close.png" width="25" height="25"/>
         <image name="fp.png" width="169" height="50"/>
         <image name="hrticon.png" width="50" height="34"/>
         <image name="location.png" width="34" height="29"/>
         <image name="mapover.png" width="320" height="60"/>
+        <image name="redpin.png" width="17" height="25"/>
         <image name="routeshow.png" width="25" height="25"/>
         <image name="settings.png" width="34" height="29"/>
         <image name="star_no.png" width="25" height="25"/>
