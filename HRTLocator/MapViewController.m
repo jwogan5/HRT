@@ -226,6 +226,10 @@
 
 
 -(void)plotMapCollections{
+    
+    // Remove all current map coolections pins
+    
+    
   
     // Plot the Bus Points if Turned on in the Settings
     bool showbuspins = true;

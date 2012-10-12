@@ -15,6 +15,16 @@
     //UITableView *locSettingsTable;
 }
 
+// Actions for the View
+-(IBAction)alwaysON;
+-(IBAction)showBusPins;
+-(IBAction)showMuseumPins;
+
+// Outlets for buttons and switches
+@property (nonatomic, retain) IBOutlet UISwitch *alwaysonswitch;
+@property (nonatomic, retain) IBOutlet UISwitch *showbusswitch;
+@property (nonatomic, retain) IBOutlet UISwitch *showmuseumswitch;
+
 //@property (nonatomic, retain) IBOutlet UITableView *locSettingsTable;
 @property (nonatomic, weak) id<ModalViewDelegate> delegate;
 
