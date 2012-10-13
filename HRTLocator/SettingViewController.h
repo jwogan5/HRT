@@ -24,8 +24,10 @@
 @property (nonatomic, retain) IBOutlet UISwitch *alwaysonswitch;
 @property (nonatomic, retain) IBOutlet UISwitch *showbusswitch;
 @property (nonatomic, retain) IBOutlet UISwitch *showmuseumswitch;
+@property (nonatomic, retain) IBOutlet UILabel *totalBusFavs;
 
 //@property (nonatomic, retain) IBOutlet UITableView *locSettingsTable;
 @property (nonatomic, weak) id<ModalViewDelegate> delegate;
+
 
 @end

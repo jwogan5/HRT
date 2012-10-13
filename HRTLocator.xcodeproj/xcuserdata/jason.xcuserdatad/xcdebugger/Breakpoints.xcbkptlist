@@ -21,12 +21,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HRTLocator/SettingViewController.m"
-         timestampString = "371450664.504455"
+         timestampString = "371786409.369651"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
-         landmarkName = "-done"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
+         landmarkName = "-alwaysON"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -34,12 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HRTLocator/SettingViewController.m"
-         timestampString = "371450664.504455"
+         timestampString = "371786409.369651"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "26"
-         endingLineNumber = "26"
-         landmarkName = "-done"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "-alwaysON"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HRTLocator/MapViewController.m"
-         timestampString = "371451966.269322"
+         timestampString = "371784288.674079"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "134"
-         endingLineNumber = "134"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
          landmarkName = "-getCurrentMapCenter"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HRTLocator/MapViewController.m"
-         timestampString = "371451966.269322"
+         timestampString = "371784288.674079"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
          landmarkName = "-updatelocation"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HRTLocator/MapViewController.m"
-         timestampString = "371451966.269322"
+         timestampString = "371784288.674079"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "93"
-         endingLineNumber = "93"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
          landmarkName = "-updatelocation"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HRTLocator/SettingViewController.m"
-         timestampString = "371452281.923434"
+         timestampString = "371786409.369651"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
+         landmarkName = "-alwaysON"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HRTLocator/busFavoriteController.m"
+         timestampString = "371785844.297672"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "HRTLocator/busFavoriteController.m"
+         timestampString = "371785844.297672"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "26"
+         endingLineNumber = "26"
          landmarkName = "-done"
          landmarkType = "5">
       </FileBreakpoint>

@@ -17,6 +17,10 @@
 
 // Synthesize vars
 @synthesize alwaysonswitch;
+@synthesize totalBusFavs;
+@synthesize showbusswitch;
+@synthesize showmuseumswitch;
+
 
 
 /*
@@ -127,6 +131,14 @@
 
 
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    // Get the current count of saved buses
+    NSMutableArray *totalBusArray = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"myFavoritesBus"]];
+    
+    NSString *favend = @" saved favorites";
+    self.totalBusFavs.text = [NSString stringWithFormat:@"%i%@", [totalBusArray count], favend];
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

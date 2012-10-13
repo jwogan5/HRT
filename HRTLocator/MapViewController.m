@@ -33,6 +33,9 @@
 
 
 - (void)didSomethingHappen:(NSString *)message {
+    
+    NSLog(@"Moved from settings back to map ...");
+    
     if ([message isEqualToString:(@"closedsettings")])
     {
        if (bushigh.layer.hidden == true)

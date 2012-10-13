@@ -427,7 +427,7 @@
                                             <segue destination="HWc-nh-ZGR" kind="modal" id="m5h-wP-Wxq"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5 saved favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JR-fn-hTS">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0 saved favorites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JR-fn-hTS">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="RSZ-W2-Skv"/>
                                             <constraint firstAttribute="width" constant="232" id="f1b-EW-yfo"/>
@@ -523,6 +523,7 @@
                         <outlet property="alwaysonswitch" destination="52G-Nl-fj8" id="xWt-ef-TD0"/>
                         <outlet property="showbusswitch" destination="dWw-l1-KGQ" id="vTg-zZ-cSW"/>
                         <outlet property="showmuseumswitch" destination="a2I-1Z-39f" id="eTV-qN-m31"/>
+                        <outlet property="totalBusFavs" destination="1JR-fn-hTS" id="Yop-P1-Rks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WjW-td-rZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,6 +670,7 @@
                 <relationship kind="outlet" name="alwaysonswitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="showbusswitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="showmuseumswitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="totalBusFavs" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="busFavoriteController" superclassName="UIViewController">

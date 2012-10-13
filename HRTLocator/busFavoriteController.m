@@ -17,11 +17,13 @@
 @synthesize busfavtable;
 
 
+
 /*
  Method done
  - Handles the closing of the setting view
  */
 - (IBAction) done {
+    
     
     // Close the Modal Settings Window
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -39,27 +41,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
+	// Do any additional setup after loading the view.
     busfavtable.layer.cornerRadius = 10;
     
-    
     // Setup the bus fav array
-    busFavs = [[NSMutableArray alloc] init];
-    [busFavs addObject:@"2415"];
-    [busFavs addObject:@"1"];
-    [busFavs addObject:@"2"];
-    [busFavs addObject:@"3"];
-    [busFavs addObject:@"4"];
-    [busFavs addObject:@"5"];
-    [busFavs addObject:@"6"];
-    [busFavs addObject:@"7"];
-    [busFavs addObject:@"8"];
-    
-    NSLog(@"Bus array has length of : %i", [busFavs count]);
-    
-    
-
+    busFavs = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"myFavoritesBus"]];
     
 }
 
@@ -72,7 +59,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    // return 2;
     return [busFavs count];
 }
 
