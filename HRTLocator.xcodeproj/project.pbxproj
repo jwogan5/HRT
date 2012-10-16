@@ -12,6 +12,7 @@
 		6F62E2B21625C8CC00DF5D9A /* whitepin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F62E2B01625C8CC00DF5D9A /* whitepin.png */; };
 		6F62E2B31625C8CC00DF5D9A /* whitepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F62E2B11625C8CC00DF5D9A /* whitepin@2x.png */; };
 		6F62E2B61625E58C00DF5D9A /* mapCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F62E2B51625E58C00DF5D9A /* mapCollections.m */; };
+		6F63D219162DB0C600426C38 /* table2LabelControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F63D218162DB0C600426C38 /* table2LabelControllerCell.m */; };
 		6F9473451626FD8B00CDBAA2 /* bluepin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473411626FD8B00CDBAA2 /* bluepin.png */; };
 		6F9473461626FD8B00CDBAA2 /* bluepin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473421626FD8B00CDBAA2 /* bluepin@2x.png */; };
 		6F9473471626FD8B00CDBAA2 /* redpin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9473431626FD8B00CDBAA2 /* redpin.png */; };
@@ -73,6 +74,8 @@
 		6F62E2B11625C8CC00DF5D9A /* whitepin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitepin@2x.png"; sourceTree = "<group>"; };
 		6F62E2B41625E58C00DF5D9A /* mapCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapCollections.h; sourceTree = "<group>"; };
 		6F62E2B51625E58C00DF5D9A /* mapCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapCollections.m; sourceTree = "<group>"; };
+		6F63D217162DB0C600426C38 /* table2LabelControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table2LabelControllerCell.h; sourceTree = "<group>"; };
+		6F63D218162DB0C600426C38 /* table2LabelControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = table2LabelControllerCell.m; sourceTree = "<group>"; };
 		6F9473411626FD8B00CDBAA2 /* bluepin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluepin.png; sourceTree = "<group>"; };
 		6F9473421626FD8B00CDBAA2 /* bluepin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluepin@2x.png"; sourceTree = "<group>"; };
 		6F9473431626FD8B00CDBAA2 /* redpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redpin.png; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				6F62E2B51625E58C00DF5D9A /* mapCollections.m */,
 				6FD8E71B1628921000F79370 /* busFavoriteController.h */,
 				6FD8E71C1628921000F79370 /* busFavoriteController.m */,
+				6F63D217162DB0C600426C38 /* table2LabelControllerCell.h */,
+				6F63D218162DB0C600426C38 /* table2LabelControllerCell.m */,
 			);
 			path = HRTLocator;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				961C58C3161F7CBF00AC5138 /* slideFromRight.m in Sources */,
 				6F62E2B61625E58C00DF5D9A /* mapCollections.m in Sources */,
 				6FD8E71D1628921000F79370 /* busFavoriteController.m in Sources */,
+				6F63D219162DB0C600426C38 /* table2LabelControllerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

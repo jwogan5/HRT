@@ -7,6 +7,7 @@
 //
 
 #import "busFavoriteController.h"
+#import "table2LabelControllerCell.h"
 
 @interface busFavoriteController ()
 
@@ -79,15 +80,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"busCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    table2LabelControllerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[table2LabelControllerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Set up the cell...
     NSString *cellValue = [busFavs objectAtIndex:indexPath.row];
-    cell.textLabel.text = cellValue;
-    
+    //cell.textLabel.text = cellValue;
+    cell.label1.text = cellValue;
+    cell.label2.text = @"(TCC to Newtown Rd.)";
     // Configure the cell...
     
     return cell;

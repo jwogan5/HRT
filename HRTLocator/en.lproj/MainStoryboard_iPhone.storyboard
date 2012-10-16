@@ -545,14 +545,44 @@
                                     <constraint firstAttribute="width" constant="305" id="h2A-45-dH2"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="busCell" id="aaf-4l-SYv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="busCell" id="aaf-4l-SYv" customClass="table2LabelControllerCell">
                                         <rect key="frame" x="0.0" y="22" width="305" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="305" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPX-j1-6g7">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="58" id="MpT-YG-RTL"/>
+                                                        <constraint firstAttribute="height" constant="21" id="ejO-PU-9e4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-Hj-DYG">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="yxN-Bf-434"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="XPX-j1-6g7" firstAttribute="leading" secondItem="aaf-4l-SYv" secondAttribute="leading" constant="20" type="default" id="CYz-b1-pnC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gse-Hj-DYG" secondAttribute="trailing" constant="20" type="default" id="MVq-Xv-yfe"/>
+                                            <constraint firstItem="XPX-j1-6g7" firstAttribute="top" secondItem="aaf-4l-SYv" secondAttribute="top" constant="12" id="Qwb-Cm-AbB"/>
+                                            <constraint firstItem="Gse-Hj-DYG" firstAttribute="top" secondItem="aaf-4l-SYv" secondAttribute="top" constant="11" id="Z15-p5-IxD"/>
+                                            <constraint firstItem="Gse-Hj-DYG" firstAttribute="leading" secondItem="XPX-j1-6g7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lpW-oP-sPQ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label1" destination="XPX-j1-6g7" id="yq9-bd-lD1"/>
+                                            <outlet property="label2" destination="Gse-Hj-DYG" id="w6c-U3-kKK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -678,6 +708,13 @@
             <relationships>
                 <relationship kind="action" name="done"/>
                 <relationship kind="outlet" name="busfavtable" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="table2LabelControllerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/table2LabelControllerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="label1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label2" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
